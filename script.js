@@ -15,3 +15,20 @@ window.addEventListener('resize', function() {
         sidebar.style.display = "none";
     }
 });
+
+/*Highlights currently viewed page in navbar */
+document.addEventListener('DOMContentLoaded', function () {
+     // Select all anchor tags inside nav that are not associated with closing the sidebar or toggling the menu
+    const navLinks = document.querySelectorAll('nav a:not([onclick]), .sidebar a');
+    // Get the current URL
+    const currentUrl = window.location.href; 
+
+    for(var i = 0; i < navLinks.length; i++){
+        var link = navLinks[i];
+        //check if the tag is linked to this url
+        //'===' same value and type
+        if(link.href === currentUrl){ 
+            link.classList.add('active');
+        }
+    }
+});

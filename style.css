@@ -1,11 +1,18 @@
+@import url('https://fonts.googleapis.com/css?family=Italianno');
 *{
     /*Remove default browser padding*/
     margin: 0; 
     padding: 0;
+
+}
+
+.title{
+    text-align: center;
+    font-family: "Italianno";
+    font-size: xx-large;
 }
 
 body{
-    min-height: 100vh; /*Content occupies entire screen*/
     background-color: #C5C5C5;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
 }
@@ -74,18 +81,206 @@ nav a:hover{
 
 }
 
+.active {
+    background-color: #1ca9b0;
+}
+
+section {
+    padding-top: 1%;
+}
+
+h1{
+    color: #2C7E84;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding-left: 1%;
+
+}
+
+.blurb{
+    display: flex; /* Activates Flexbox layout on the container */
+    align-items: center; /* Vertically centers the items in the container */
+    justify-content: space-between; /* Places space between the text and the image */
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-bottom: 2%;
+}
+
+.blurb p {
+    flex: 1;
+    margin-right: 20px;
+}
+.blurb img{
+ 
+    width: 30%;
+    height: auto;
+    border: 5px solid transparent;
+    border-image-source: linear-gradient(45deg, #2C7E84, #1e7e83);
+    border-image-slice: 1;
+    
+    
+}
+
+.work_preview {
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
+    padding: 1%;
+}
+
+.work_preview img {
+    width: 32%;
+    height: auto;
+    border: 5px solid transparent;
+    border-image-source: linear-gradient(45deg, #1e7e83, #2C7E84);
+    border-image-slice: 1; 
+}
+
+
+.button_container{
+    text-align: center;
+    padding: 3%;
+}
+.button{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #1ca9b0;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+footer {
+    background-color: black;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between; 
+    /*Make footer stick to botton*/
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.contact-info{
+    text-align:left;
+}
+
+.contact-info p{
+    color: white;
+
+}
+
+.contact-info h2{
+    color: #21D3E0;
+    padding-bottom: 5%;
+}
+
+footer a {
+    color: white;
+    text-decoration: none; /* Optional: Adjust as per design */
+}
+
+.contact-info a:hover {
+    text-decoration: underline; /* Optional: Adjust as per design */
+}
+
+.socials{
+    color: #21D3E0;
+    text-align: center;
+    padding-right: 1%;
+}
+
+.socials img {
+    padding-top: 25%;
+    width: 24px; 
+    height: auto;
+    margin: 10px; 
+}
+
+
+
 @media(max-width: 600px){
     .hideOnMobile{
         display: none;
     }
     .menu-button{
         display: block;
-   
     }
+    .blurb{
+        flex-direction: column;
+    }
+    .blurb p{
+        margin-right: 0;
+    }
+    .blurb img{
+        margin-top: 10px;
+        width: 70%;
+        max-width: 100%; /* Allow the image to take full width */
+    }
+   
 }
 
 @media(max-width: 400px){
     .sidebar{
         width: 100%;
     }
+}
+
+
+/*Font adjust per screen*/
+/* Smaller screens, typically mobile devices */
+@media (max-width: 400px) {
+    body p {
+        font-size: 14px; /* Smaller font size for mobile devices */
+    }
+    footer {
+        font-size: 10px;
+    }
+    
+}
+
+/* Medium screens, typically tablets */
+@media (min-width: 601px) and (max-width: 768px) {
+    body p {
+        font-size: 15px; /* Slightly larger font size for tablets */
+    }
+}
+
+/* Larger screens */
+@media (min-width: 769px) {
+    body p {
+        font-size: 20px; /* Default size, or slightly larger if needed */
+    }
+}
+
+/* Extra-large screens */
+@media (min-width: 1080px) {
+    body p {
+        font-size: 24px; /* Default size, or slightly larger if needed */
+    }
+    .socials img{
+        width: 30px
+    }
+}
+
+/* Extra-large screens */
+@media (min-width: 1200px) {
+    body p {
+        font-size: 32px; /* Larger font size for large desktops */
+    }
+
+    h1{
+        font-size: 40px;
+    }
+
+    footer h2{
+        font-size: 30px
+    }
+
+    .socials img{
+        width: 50px
+    }
+
+    
 }
