@@ -1,0 +1,91 @@
+*{
+    /*Remove default browser padding*/
+    margin: 0; 
+    padding: 0;
+}
+
+body{
+    min-height: 100vh; /*Content occupies entire screen*/
+    background-color: #C5C5C5;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
+}
+
+nav{
+    background-color: black;
+    box-shadow: 3px 3px 5px grey;
+}
+
+nav ul{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+nav li{
+    height: 50px;
+    width: 100%;
+
+}
+
+nav a{
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none; /*Remove default underline*/
+    display: flex;
+    align-items: center;
+    justify-content: center; /*Centre all options*/
+    color: white;
+}
+
+nav a:hover{
+    background-color: #1ca9b0;
+}
+
+.sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999; /*Sidebar above everything else*/
+    backdrop-filter: blur(10px); /*How elements behind element rendered*/
+    background-color: black;
+    box-shadow: -1px 0 3px grey;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.sidebar li{
+    width: 100%;
+}
+
+.sidebar a{
+    width: auto;
+}
+
+.menu-button{
+    display: none;
+
+}
+
+@media(max-width: 600px){
+    .hideOnMobile{
+        display: none;
+    }
+    .menu-button{
+        display: block;
+   
+    }
+}
+
+@media(max-width: 400px){
+    .sidebar{
+        width: 100%;
+    }
+}
