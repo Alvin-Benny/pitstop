@@ -198,6 +198,32 @@ footer a {
     margin: 10px; 
 }
 
+/*Contact page*/
+.team {
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    padding: 1%;
+}
+
+.team-member {
+    text-align: center; 
+    margin: 5%;
+}
+.team-member {
+    text-align: center; 
+    margin: 5%; 
+}
+
+
+.team img {
+    width: 32%;
+    height: auto;
+    border: 5px solid transparent;
+    border-image-source: linear-gradient(45deg, #1e7e83, #2C7E84);
+    border-image-slice: 1;
+}
+
 
 
 @media(max-width: 600px){
@@ -221,22 +247,36 @@ footer a {
    
 }
 
-@media(max-width: 400px){
-    .sidebar{
-        width: 100%;
-    }
-}
+
 
 
 /*Font adjust per screen*/
 /* Smaller screens, typically mobile devices */
-@media (max-width: 400px) {
+@media (max-width: 400px) and (max-width: 600px) {
+    .sidebar{
+        width: 100%;
+    }
+    
     body p {
         font-size: 14px; /* Smaller font size for mobile devices */
     }
     footer {
-        font-size: 10px;
+        font-size: 14px;
     }
+
+    .team h1{
+        font-size: 19px;
+    }
+
+    .team p{
+        font-size: 15px;
+    }
+
+    .team{
+        flex-direction: column; 
+    }
+
+
     
 }
 
@@ -245,12 +285,30 @@ footer a {
     body p {
         font-size: 15px; /* Slightly larger font size for tablets */
     }
+
+    .team h1{
+        font-size: 19px;
+    }
+
+    .team p{
+        font-size: 15px;
+    }
+    
 }
 
 /* Larger screens */
 @media (min-width: 769px) {
     body p {
-        font-size: 20px; /* Default size, or slightly larger if needed */
+        font-size: 18px; /* Default size, or slightly larger if needed */
+    }
+
+    
+    .team h1{
+        font-size: 22px;
+    }
+
+    .team p{
+        font-size: 18px;
     }
 }
 
@@ -261,6 +319,18 @@ footer a {
     }
     .socials img{
         width: 30px
+    }
+
+    footer p{
+        font-size: 20px
+    }
+
+    .team h1{
+        font-size: 24px;
+    }
+
+    .team p{
+        font-size: 20px;
     }
 }
 
@@ -274,8 +344,14 @@ footer a {
         font-size: 40px;
     }
 
+
+}
+
     footer h2{
-        font-size: 30px
+        font-size: 32px
+    }
+    footer p{
+        font-size: 24px
     }
 
     .socials img{
