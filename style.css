@@ -174,9 +174,17 @@ img:hover { /*Set images to slightly enlarge upon hover*/
     padding: 10px 20px;
     background-color: #1ca9b0;
     color: white;
+    border: 1px solid #ccc; 
+    border-radius: 4px;
     text-decoration: none;
     text-align: center;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s; /*For when hovering*/
+    padding: 1%;
+    font-size: 22px;
+}
+
+.button:hover {
+    background-color: #138f91;
 }
 
 footer {
@@ -224,19 +232,17 @@ footer a {
     margin: 10px; 
 }
 
-/*Contact page*/
+/*Team page*/
 .team {
     display: flex;
     align-items: center; 
     justify-content: center; 
 }
 
-
 .team-member {
     text-align: center; 
     margin: 5%; 
 }
-
 
 .team img {
     width: 40%;
@@ -245,6 +251,77 @@ footer a {
     border-image-slice: 1;
     margin-bottom: 5%;
 }
+
+/*Contact Page*/
+.contact h2{
+    padding-bottom: 2%;
+}
+
+.contact {
+    font-size: 24px;
+    text-align: center;
+    padding-top: 2%;
+}
+
+.form-group {
+    margin-bottom: 3%; /* Space between each form element */
+}
+
+.item {
+    width: 50%; 
+    padding: 10px;
+    /* To curve boxees*/
+    border: 1px solid #ccc; 
+    border-radius: 4px;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.item:focus {
+    border-color: #1ca9b0;
+    outline: none; /* Remove default focus outline */
+}
+
+button.item {
+    background-color: #1ca9b0;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    padding: 1%;
+    font-size: 22px;
+}
+
+button.item:hover {
+    background-color: #138f91;
+
+}
+
+.error-txt{
+    font-size: 18px;
+    color:#a71818;
+    text-align:center;
+    padding: 0.5%;
+    display: none;
+}
+
+.success-txt{
+    color: green;
+    padding-top: 2%;
+    display: none;
+}
+
+/*Ensuring consistent font and size*/
+input, textarea {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande';  /* Ensuring a consistent font family */
+    font-size: 16px;     
+}
+
+/*Ensure pseudo element placeholder text color is consistent*/
+input::placeholder, textarea::placeholder {
+    color: #6e6e6e;
+}
+
+
+
 
 
 /* Smaller screens, typically mobile devices */
@@ -270,7 +347,7 @@ footer a {
     .sidebar{
         width: 100%;
     }
-    
+
     body p {
         font-size: 14px; 
     }
@@ -288,6 +365,10 @@ footer a {
 
     .team{
         flex-direction: column; 
+    }
+
+    .item {
+        width: 80%; 
     }
 
 
@@ -312,9 +393,11 @@ footer a {
         margin-bottom: 5%;
     }
 
-}
+    .item {
+        width: 60%; 
+    }
 
-    
+}
 
 /* Larger screens */
 @media (min-width: 769px) {

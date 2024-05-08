@@ -26,7 +26,38 @@
                     <li><a href="contact.html">Contact</a></li>
                     <li><a href="news.html">News</a></li>
                 </ul>
-            </nav> 
+            </nav>
+            
+            <section class="contact">
+                <h2>Let's talk</h2>
+                <form>
+                    <div class="form-group">
+                        <input type="text" placeholder="Name" id="name" class="item" autocomplete="off">
+                        <div class="error-txt">Full Name can't be blank</div>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Email" id="email" class="item" autocomplete="off">
+                        <div class="error-txt">Email Address can't be blank</div>
+                    </div>
+                    <!-- Use input type tel so mobile devices use numeric keypad-->
+                    <div class="form-group">
+                        <input type="tel" placeholder="Phone Number" id="number" class="item" autocomplete="off">
+                        <div class="error-txt">Phone Number can't be blank</div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Subject" id="subject" class="item" autocomplete="off">
+                        <div class="error-txt">Subject can't be blank</div>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" cols="50" rows="10" placeholder="Your Message" class="item" autocomplete="off"></textarea>
+                        <div class="error-txt">Message can't be blank</div>
+                    </div>
+                    <button type="submit" class="item">Send Message</button>
+                </form>
+                <div class="success-txt">
+                    <p>Your message has been sent successfully!</p>
+                </div>
+            </section>
         </main>
 
     
