@@ -1,32 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset = "UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=egdge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset = "UTF-8"> <!--Character set-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!--Set viewport to match device width-->
         <title>Pitstop Productions</title>
-        <link rel="stylesheet" href="style.css"]>
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <p class="title">Pitstop Productions</p>
-        <nav>
-            <ul>
-                <li class="hideOnMobile"><a href="index.html">Home</a></li>
-                <li class="hideOnMobile"><a href="work.html">Our Work</a></li>
-                <li class="hideOnMobile"><a href="team.html">Our Team</a></li>
-                <li class="hideOnMobile"><a href="contact.html">Contact</a></li>
-                <li class="hideOnMobile"><a href="news.html">News</a></li>
-                <li class="menu-button" onclick=showSidebar()><a href="#">☰</a></li>
-            </ul>
-            <ul class="sidebar">
-                <li onclick=hideSidebar()><a href="#">X</a></li>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="work.html">Our Work</a></li>
-                <li><a href="team.html">Our Team</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="news.html">News</a></li>
-            </ul>
-        </nav> 
+        <main>
+            <p class="title">Pitstop Productions</p>
+            <nav>
+                <ul>
+                    <li class="hideOnMobile"><a href="index.html">Home</a></li>
+                    <li class="hideOnMobile"><a href="work.html">Our Work</a></li>
+                    <li class="hideOnMobile"><a href="team.html">Our Team</a></li>
+                    <li class="hideOnMobile"><a href="contact.html">Contact</a></li>
+                    <li class="hideOnMobile"><a href="news.html">News</a></li>
+                    <li class="menu-button" onclick=showSidebar()><a href="#">☰</a></li>
+                </ul>
+                <ul class="sidebar">
+                    <li onclick=hideSidebar()><a href="#">X</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="work.html">Our Work</a></li>
+                    <li><a href="team.html">Our Team</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="news.html">News</a></li>
+                </ul>
+            </nav> 
+        </main>
+
+    
+        <footer>
+            <section class="contact-info">
+                <h2>Get in Touch</h2>
+            <p>
+                Pitstop Productions<br>
+                Brisbane, Australia<br>
+                <a href="mailto:enquire@pitstop.com">enquire@pitstop.com</a><br>
+                <a href="tel:+61431843038">(+61) 431 843 038</a>
+            </p>
+            </section>
+            <section class="socials">
+                <h2>Follow Us</h2>
+                <a href="#" aria-label="Facebook">
+                    <img src="icon/facebook.png" alt="Facebook">
+                </a>
+                <a href="#" aria-label="Instagram">
+                    <img src="icon/instagram.png" alt="Instagram">
+                </a>
+            
+            </section>
+        </footer>
         <script src="script.js" ></script>
     </body>
+    
+    
 </html>

@@ -1,7 +1,6 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Convergence&display=swap');
 *{
-    /*Remove default browser padding*/
+    /*Remove default browser padding and margin for all elements*/
     margin: 0; 
     padding: 0;
 
@@ -14,14 +13,30 @@
     padding: 1%
 }
 
+
+/*To ensure footer sticks to bottom had to include a main tag in HTML
+where all the content is*/
+html{
+    height:100% /*Take up 100% of browser/window */
+}
+
 body{
     background-color: #C5C5C5;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: flex; /*More control over how the main div is displayed*/
+    flex-direction: column;
+    min-height: 100vh; /* Ensure it covers at least the full viewport (browser) height  */
+}
+
+main {
+    flex: 1; /*Take up any available space*/
 }
 
 nav{
     background-color: black;
-    box-shadow: 3px 3px 5px grey;
+    /* x-offset, y-offset, blur radius*/
+    box-shadow: 0px 5px 5px grey;
+
 }
 
 nav ul{
@@ -30,8 +45,7 @@ nav ul{
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    padding: 0;
-    margin: 0;
+
 }
 
 nav li{
@@ -56,14 +70,14 @@ nav a:hover{
 
 .sidebar{
     position: fixed;
-    top: 0;
+    top: 0; /*Fix sidebar to top right*/
     right: 0;
     height: 100vh;
     width: 250px;
     z-index: 999; /*Sidebar above everything else*/
-    backdrop-filter: blur(10px); /*How elements behind element rendered*/
+    backdrop-filter: blur(10px); /*How elements behind sidebar rendered*/
     background-color: black;
-    box-shadow: -1px 0 3px grey;
+    box-shadow: 0px 10px 15px grey;
     display: none;
     flex-direction: column;
     align-items: flex-start;
@@ -104,10 +118,11 @@ img{
     transition: 0.3s;
 }
 
+
 img:hover { /*Set images to slightly enlarge upon hover*/
     transform:scale(1.05);
     transition: 0.3s;
-    box-shadow: 5px 5px 7px grey;
+    box-shadow: 0px 10px 15px grey;
 
 }
 
@@ -128,7 +143,7 @@ img:hover { /*Set images to slightly enlarge upon hover*/
  
     width: 30%;
     height: auto;
-    border: 5px solid transparent;
+    border: 3px solid transparent;
     border-image-source: linear-gradient(45deg, #2C7E84, #1e7e83);
     border-image-slice: 1;
     
@@ -143,8 +158,8 @@ img:hover { /*Set images to slightly enlarge upon hover*/
 
 .work_preview img {
     width: 32%;
-    height: auto;
-    border: 5px solid transparent;
+    height: auto; /*Maintain aspect ratio*/
+    border: 3px solid transparent;
     border-image-source: linear-gradient(45deg, #1e7e83, #2C7E84);
     border-image-slice: 1; 
 }
@@ -169,6 +184,7 @@ footer {
     display: flex;
     justify-content: space-between; 
     width: 100%;
+    margin-top: 5%;
 }
 
 .contact-info{
@@ -199,11 +215,10 @@ footer a {
     color: #21D3E0;
     text-align: center;
     margin-right: 7%;
+    
 }
 
 .socials img {
-    transition: none;
-
     width: 24px; 
     height: auto;
     margin: 10px; 
@@ -214,8 +229,6 @@ footer a {
     display: flex;
     align-items: center; 
     justify-content: center; 
-    
-
 }
 
 
@@ -228,15 +241,10 @@ footer a {
 .team img {
     width: 40%;
     height: auto;
-    border: 5px solid white;
+    border: 3px solid white;
     border-image-slice: 1;
-    margin-bottom: 1%;
+    margin-bottom: 5%;
 }
-
-
-
-
-
 
 
 /* Smaller screens, typically mobile devices */
@@ -282,6 +290,7 @@ footer a {
         flex-direction: column; 
     }
 
+
 }
 
 /* Medium screens, typically tablets */
@@ -299,7 +308,8 @@ footer a {
     }
 
     .team img{
-        width: 70%;
+        width: 80%;
+        margin-bottom: 5%;
     }
 
 }
@@ -368,6 +378,5 @@ footer a {
     .socials img{
         width: 50px
     }
-
     
 }
