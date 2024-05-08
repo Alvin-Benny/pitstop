@@ -1,3 +1,8 @@
+/*Sidebar code
+Use button clicks to change the sidebar display to flex to none and vice versa
+Use media queries to hide the normal navigation bar text
+*/
+
 function showSidebar(){
     const sidebar = document.querySelector('.sidebar');
     sidebar.style.display = "flex";

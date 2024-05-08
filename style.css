@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Italianno');
+
+@import url('https://fonts.googleapis.com/css2?family=Convergence&display=swap');
 *{
     /*Remove default browser padding*/
     margin: 0; 
@@ -8,8 +9,9 @@
 
 .title{
     text-align: center;
-    font-family: "Italianno";
-    font-size: xx-large;
+    font-family: "Convergence";
+    font-size: x-large;
+    padding: 1%
 }
 
 body{
@@ -96,6 +98,19 @@ h1{
 
 }
 
+
+/*Hover transition*/
+img{
+    transition: 0.3s;
+}
+
+img:hover { /*Set images to slightly enlarge upon hover*/
+    transform:scale(1.05);
+    transition: 0.3s;
+    box-shadow: 5px 5px 7px grey;
+
+}
+
 .blurb{
     display: flex; /* Activates Flexbox layout on the container */
     align-items: center; /* Vertically centers the items in the container */
@@ -117,7 +132,6 @@ h1{
     border-image-source: linear-gradient(45deg, #2C7E84, #1e7e83);
     border-image-slice: 1;
     
-    
 }
 
 .work_preview {
@@ -138,7 +152,7 @@ h1{
 
 .button_container{
     text-align: center;
-    padding: 3%;
+
 }
 .button{
     display: inline-block;
@@ -152,18 +166,14 @@ h1{
 
 footer {
     background-color: black;
-    padding: 20px;
     display: flex;
     justify-content: space-between; 
-    /*Make footer stick to botton*/
-    left: 0;
-    bottom: 0;
     width: 100%;
-    box-sizing: border-box;
 }
 
 .contact-info{
     text-align:left;
+    padding-left: 3%;
 }
 
 .contact-info p{
@@ -178,21 +188,22 @@ footer {
 
 footer a {
     color: white;
-    text-decoration: none; /* Optional: Adjust as per design */
+    text-decoration: none;
 }
 
 .contact-info a:hover {
-    text-decoration: underline; /* Optional: Adjust as per design */
+    text-decoration: underline; 
 }
 
 .socials{
     color: #21D3E0;
     text-align: center;
-    padding-right: 1%;
+    margin-right: 7%;
 }
 
 .socials img {
-    padding-top: 25%;
+    transition: none;
+
     width: 24px; 
     height: auto;
     margin: 10px; 
@@ -203,13 +214,11 @@ footer a {
     display: flex;
     align-items: center; 
     justify-content: center; 
-    padding: 1%;
+    
+
 }
 
-.team-member {
-    text-align: center; 
-    margin: 5%;
-}
+
 .team-member {
     text-align: center; 
     margin: 5%; 
@@ -217,16 +226,21 @@ footer a {
 
 
 .team img {
-    width: 32%;
+    width: 40%;
     height: auto;
-    border: 5px solid transparent;
-    border-image-source: linear-gradient(45deg, #1e7e83, #2C7E84);
+    border: 5px solid white;
     border-image-slice: 1;
+    margin-bottom: 1%;
 }
 
 
 
-@media(max-width: 600px){
+
+
+
+
+/* Smaller screens, typically mobile devices */
+@media (max-width: 600px) {
     .hideOnMobile{
         display: none;
     }
@@ -244,21 +258,13 @@ footer a {
         width: 70%;
         max-width: 100%; /* Allow the image to take full width */
     }
-   
-}
-
-
-
-
-/*Font adjust per screen*/
-/* Smaller screens, typically mobile devices */
-@media (max-width: 400px) and (max-width: 600px) {
+    
     .sidebar{
         width: 100%;
     }
     
     body p {
-        font-size: 14px; /* Smaller font size for mobile devices */
+        font-size: 14px; 
     }
     footer {
         font-size: 14px;
@@ -276,8 +282,6 @@ footer a {
         flex-direction: column; 
     }
 
-
-    
 }
 
 /* Medium screens, typically tablets */
@@ -293,8 +297,14 @@ footer a {
     .team p{
         font-size: 15px;
     }
-    
+
+    .team img{
+        width: 70%;
+    }
+
 }
+
+    
 
 /* Larger screens */
 @media (min-width: 769px) {
@@ -302,13 +312,16 @@ footer a {
         font-size: 18px; /* Default size, or slightly larger if needed */
     }
 
-    
     .team h1{
         font-size: 22px;
     }
 
     .team p{
         font-size: 18px;
+    }
+
+    .team img{
+        width: 50%;
     }
 }
 
@@ -334,7 +347,7 @@ footer a {
     }
 }
 
-/* Extra-large screens */
+/* Extra--Extra-large screens */
 @media (min-width: 1200px) {
     body p {
         font-size: 32px; /* Larger font size for large desktops */
@@ -344,8 +357,6 @@ footer a {
         font-size: 40px;
     }
 
-
-}
 
     footer h2{
         font-size: 32px
