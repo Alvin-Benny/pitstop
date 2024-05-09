@@ -42,35 +42,38 @@ for(var i = 0; i < navLinks.length; i++){
 
 // Select form element
 const form = document.querySelector('form');
-if (form){ //if there is a form on the current page
-    // Get success indicator element
+// Check if the form exists on the current page to avoid errors in case it's not present.
+if (form){
+    // Select the element that will display the success message with class 'success-txt'
     const successMessage = document.querySelector('.success-txt');
-    // Event listener for the submit button
+    // Event listener to handle form submission event
     form.addEventListener('submit', function(event) {
-        let hasError = false; // Declare hasError variable to track form validity
+        let hasError = false; // Declare hasError flag to track form validity
         successMessage.style.display = 'none'; // No success initially
 
-        // Check each input in the form which is classed as 'item' inside another
-        // class 'form-group'
+        // Query and iterate over each input element within the form that has a class 'item'
+        // nested within a parent element having the class 'form-group'.
         document.querySelectorAll('.form-group .item').forEach(input => {
             // Next element is div storing the error message
             const errorText = input.nextElementSibling; 
             if (input.value.trim() === '') { // Check if the input is empty
                 // Make sure error is visible
                 errorText.style.display = 'block'; 
-                // Red border
+                // Red border for input
                 input.style.borderColor = '#a71818';
                 hasError = true;
             } else {
-                errorText.style.display = 'none'; // Hide the error message
+                // Hide the error message if not empty
+                errorText.style.display = 'none'; 
                 input.style.borderColor = 'white';
             }
         });
 
-        // Ensure to remove success message if errors are found and prevent form from submitting.
+        // After checking all inputs, determine if any error was found.
         if (hasError) {
             event.preventDefault(); 
         } else {
+            // If no errors, display the success message.
             successMessage.style.display = 'block';
             // Prevent the form from being submitted because I haven't implemented
             // the functionality to send enquiries (otherwise the form would reset)
@@ -83,18 +86,28 @@ const initSlider = () => {
     // Select all slider wrappers
     const sliders = document.querySelectorAll(".slider-wrapper");
 
-    // Process each slider independently
+    // Iterate over each slider element
     sliders.forEach(slider => {
+        //Find child element with class "image-list" which contains the images
         const imageList = slider.querySelector(".image-list");
+        //Also find all elements with class "slide-button" which are the buttons
         const slideButtons = slider.querySelectorAll(".slide-button");
 
+        //Add a click event listener to each button to handle sliding action
         slideButtons.forEach(button => {
             button.addEventListener("click", () => {
                 // Determine the direction based on the button ID
-                const direction = button.id.includes("prev-slide") ? -1 : 1;
+                let direction;
+                if (button.id.includes("prev-slide")) {
+                    direction = -1; 
+                } else {
+                    direction = 1; 
+                }
+                //330px is roughly size of image
                 const scrollAmount = 330 * direction; // Scroll by 330px each click
 
                 // Perform the scroll
+                //Smooth -> animate smoothly
                 imageList.scrollBy({ left: scrollAmount, behavior: "smooth" });
             });
         });
