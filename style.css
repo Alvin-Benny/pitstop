@@ -14,11 +14,7 @@
 }
 
 
-/*To ensure footer sticks to bottom had to include a main tag in HTML
-where all the content is*/
-html{
-    height:100% /*Take up 100% of browser/window */
-}
+
 
 body{
     background-color: #C5C5C5;
@@ -238,8 +234,9 @@ footer a {
 }
 
 .team-member {
-    text-align: center; 
-    margin: 5%; 
+    text-align: center;
+    margin: 5%;
+    flex: 1; /* Grows and shrinks dynamically with equal weight */
 }
 
 .team img {
@@ -334,6 +331,10 @@ input::placeholder, textarea::placeholder {
 
 
 }
+
+.slider-wrapper p{
+    font-size: 20px;
+}
 .slider-wrapper .slide-button{
     display: inline-block;
     background-color: #1ca9b0;
@@ -346,7 +347,7 @@ input::placeholder, textarea::placeholder {
     padding: 1%;
     font-size: 22px;
     position: absolute;
-    top: 50%; /* Align buttons vertically */
+    top: 60%; /* Align buttons vertically */
     transform: translateY(-50%); /* Center buttons vertically */
     z-index: 5; /* Ensure buttons are above the image list */
 }
@@ -402,7 +403,7 @@ input::placeholder, textarea::placeholder {
     margin-right: auto;
     margin-left: auto;
     padding-top: 1%;
-    padding-bottom: 15%; /*So button doesnt lay over image*/
+    padding-bottom: 10%; /*So button doesnt lay over image*/
     display: grid;
     /*Grid has 3 columns and each column takes 1 fraction of available space*/
     grid-template-columns: repeat(3, 1fr);
@@ -487,6 +488,10 @@ input::placeholder, textarea::placeholder {
 
     .image-grid{
         display: block;
+    }
+
+    .slider-wrapper .slide-button{
+        top: 70%; /* Ensure button stays aligned on mobile */
     }
 
 
