@@ -116,6 +116,7 @@ h1{
 /*Hover transition*/
 img{
     transition: 0.3s;
+
 }
 
 
@@ -144,8 +145,7 @@ img:hover { /*Set images to slightly enlarge upon hover*/
     width: 30%;
     height: auto;
     border: 3px solid transparent;
-    border-image-source: linear-gradient(45deg, #2C7E84, #1e7e83);
-    border-image-slice: 1;
+    border: 3px solid #2C7E84;
     
 }
 
@@ -159,9 +159,7 @@ img:hover { /*Set images to slightly enlarge upon hover*/
 .work_preview img {
     width: 32%;
     height: auto; /*Maintain aspect ratio*/
-    border: 3px solid transparent;
-    border-image-source: linear-gradient(45deg, #1e7e83, #2C7E84);
-    border-image-slice: 1; 
+    border: 3px solid #2C7E84;
 }
 
 
@@ -248,7 +246,6 @@ footer a {
     width: 40%;
     height: auto;
     border: 3px solid white;
-    border-image-slice: 1;
     margin-bottom: 5%;
 }
 
@@ -320,6 +317,123 @@ input::placeholder, textarea::placeholder {
     color: #6e6e6e;
 }
 
+/*Our Work Page*/
+
+.work-container{
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.slider-wrapper{
+    position: relative;
+    width: 75%;
+    margin: 0 auto;
+    padding: 2% 5%;  /* Add padding to create space for buttons */
+    box-sizing: border-box; /* Include padding in width calculations */
+
+
+}
+.slider-wrapper .slide-button{
+    display: inline-block;
+    background-color: #1ca9b0;
+    color: white;
+    border: 1px solid #1ca9b0;
+    border-radius: 4px;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s; /*For when hovering*/
+    padding: 1%;
+    font-size: 22px;
+    position: absolute;
+    top: 50%; /* Align buttons vertically */
+    transform: translateY(-50%); /* Center buttons vertically */
+    z-index: 5; /* Ensure buttons are above the image list */
+}
+.slide-button:hover{
+    background-color: #138f91;
+}
+
+.slider-wrapper .slide-button#prev-slide{
+    left: 0px;  /* Place at the very left edge of the padded area */
+    
+
+}
+
+.slider-wrapper .slide-button#prev-slide-2{
+    left: 0px;  /* Place at the very left edge of the padded area */
+    
+
+}
+
+.slider-wrapper .slide-button#next-slide{
+    right: 0px;
+
+}
+
+.slider-wrapper .slide-button#next-slide-2{
+    right: 0px;
+
+}
+
+.slider-wrapper .image-list{
+    display: flex; /* Flex display to align images horizontally */
+    overflow-x: auto; /* Allows horizontal scrolling */
+    white-space: nowrap; /* Prevents wrapping of items */
+    box-sizing: border-box; /* Includes padding in width calculation */
+    
+
+
+}
+
+/**Disable default scrollbar*/
+.slider-wrapper .image-list::-webkit-scrollbar{
+    display: none;
+}
+
+.slider-wrapper .image-list .image-item{
+    width: 325px; /*Size of each image*/
+    height: auto;
+    border: 3px solid #2C7E84;
+}
+
+/*Photography Page*/
+.image-grid {
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 1%;
+    padding-bottom: 15%; /*So button doesnt lay over image*/
+    display: grid;
+    /*Grid has 3 columns and each column takes 1 fraction of available space*/
+    grid-template-columns: repeat(3, 1fr);
+    width: 90%;
+    gap: 2%
+}
+
+.image-item {
+    width: 100%; 
+    height: auto; 
+    border: 3px solid #2C7E84;
+}
+
+/*Retouching Page*/
+.image-grid-retouching {
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 1%;
+    padding-bottom: 25%; /*So button doesnt lay over image*/
+    display: grid;
+    /*Grid has 3 columns and each column takes 1 fraction of available space*/
+    grid-template-columns: repeat(2, 1fr);
+    width: 90%;
+    gap: 2%;
+}
+
+.image-item-retouching{
+    width: 100%; 
+    height: auto; 
+    border: 3px solid black;
+}
 
 
 
@@ -370,6 +484,11 @@ input::placeholder, textarea::placeholder {
     .item {
         width: 80%; 
     }
+
+    .image-grid{
+        display: block;
+    }
+
 
 
 }
