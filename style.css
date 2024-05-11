@@ -213,6 +213,7 @@ footer a {
 /*Team page*/
 .team {
     display: flex;
+
     align-items: center; 
     justify-content: center; 
 }
