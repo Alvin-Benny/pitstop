@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Convergence&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
 *{
     /*Remove default browser padding and margin for all elements*/
     margin: 0; 
@@ -8,14 +9,16 @@
 
 .title{
     text-align: center;
-    font-family: "Convergence";
+    font-family: "Quicksand", sans-serif;
     font-size: x-large;
+    font-weight: bold;
     padding: 1%
 }
 
 body{
     background-color: #C5C5C5;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 500;
     display: flex; /*More control over how the main div is displayed*/
     flex-direction: column;
     min-height: 100vh; /* Ensure it covers at least the full viewport (browser) height  */
@@ -86,7 +89,7 @@ section {
 
 h1{
     color: #2C7E84;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: "Quicksand", sans-serif;
     padding-left: 1%;
 
 }
