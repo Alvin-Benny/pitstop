@@ -91,6 +91,7 @@ const initSlider = () => {
         //Find child element with class "image-list" which contains the images
         const imageList = slider.querySelector(".image-list");
         //Also find all elements with class "slide-button" which are the buttons
+        //Children of the current slider.
         const slideButtons = slider.querySelectorAll(".slide-button");
 
         //Add a click event listener to each button to handle sliding action
@@ -114,4 +115,5 @@ const initSlider = () => {
     });
 };
 
+//Initialise slider as soon as webpage loads
 window.addEventListener("load", initSlider);
